@@ -1,0 +1,308 @@
+:root {
+    --primary-color: #007BFF;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: var(--background-color);
+}
+
+#textoGerado {
+    display: none;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#Ocorrência{
+    width: 92%;
+    height: 50px;
+    padding: 10px;
+    resize: none;
+}
+textarea{
+    width: 92%;
+    height: 350px;
+    padding: 10px;
+    resize: none;
+}
+
+.content {
+    display: none; /* Inicialmente oculto */
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.question {
+    margin-bottom: 10px; /* Espaçamento entre as perguntas */
+}
+
+label {
+    margin-left: 10px; /* Espaçamento entre o checkbox e o texto */
+    display: inline-block;
+}
+
+#alerta {
+    display: none;
+    position: fixed;
+    top: 20px; /* Mudança de bottom para top */
+    right: 20px; /* Manter o right para alinhar à direita */
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.qboxtrat{
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: calc(30% - 20px);
+    height: auto; /* Ajuste a altura para auto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+button {
+    padding: 5px 20px; /* Aumenta o espaçamento interno */
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: var(--primary-color); /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona transições suaves */
+}
+
+#gerarTexto{
+    width: 150px;
+}
+
+button:active {
+    transform: scale(0.50); /* Reduz o tamanho do botão ao ser clicado */
+}
+
+
+.title {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.tab-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tab-container > article,
+section {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: calc(30% - 20px);
+    height: auto; /* Ajuste a altura para auto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tab-container > article:hover,
+section:hover {
+    transform: scale(1.02);
+}
+
+.tab-container h2 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.tab-container p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.tab-container ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.tab-container ul li {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Estilos para a barra de pesquisa e tabela */
+#searchInput {
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.container {
+    overflow-x: auto; /* Permite rolagem horizontal se necessário */
+    max-width: 100%;  /* Limita a largura máxima */
+}
+
+.table-section {
+    max-height: 130px; /* Defina a altura máxima desejada */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+}
+
+#resultTable {
+    width: 100%; /* Garante que a tabela ocupe 100% do espaço do contêiner */
+    border-collapse: collapse;
+    box-sizing: border-box; /* Inclui padding e border no cálculo de largura */
+}
+
+#resultTable th,
+#resultTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 10px;
+}
+
+#resultTable th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#resultTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#resultTable tr:hover {
+    background-color: #ddd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .tab-container > article,
+    section {
+        width: calc(100% - 20px);
+    }
+}
+
+
+
+/* Estilo para os inputs */
+input[type="text"] {
+    padding: 5px;            /* Espaçamento interno para conforto */
+    margin: 7px;
+    border: 1px solid #ccc;  /* Cor da borda */
+    border-radius: 5px;      /* Cantos arredondados */
+    font-size: 12px;         /* Tamanho da fonte */
+    transition: border-color 0.3s; /* Animação para mudança de cor da borda */
+    width: 230px;            /* Largura fixa de 150px */
+    text-align: center;      /* Alinha o texto ao centro */
+
+}
+
+#nome_motorista,
+#nome_responsavel,
+#numero_motorista,
+#numero_responsavel,
+#nome_policial,
+#numero_policial{
+    width: 130px; 
+}
+
+
+
+#Placa{
+    position: relative;
+    left: 45px;
+}
+#Carreta{
+    position: relative;
+    left: 33px;
+}
+#Motorista{
+    position: relative;
+    left: 21px;
+}
+#Operação{
+    position: relative;
+    left: 17px;
+}
+#Carga{
+    position: relative;
+    left: 41px;
+}
+#Localização{
+    position: relative;
+    left: 5px;
+}
+#Situação{
+    position: relative;
+    left: 25px;
+}
+#cor{
+    position: relative;
+    left: 46px;
+}
+#cpf{
+    position: relative;
+    left: 40px;
+}
+#veiculo{
+    position: relative;
+    left: 10px;
+}
+#modelo{
+    position: relative;
+    left: 23px;
+}
+#carreta_pr{
+    position: relative;
+    left: 22px;
+}
+#motorista_pr{
+    position: relative;
+    left: 10px;
+}
+#cavalo{
+    position: relative;
+    left: 25px;
+}
+#veiculo{
+    position: relative;
+    left: 23px;
+}
+#local{
+    position: relative;
+    left: 35px;
+}
+
+/* Estilo para o input em foco */
+input[type="text"]:focus {
+    border-color: #007bff;   /* Muda a cor da borda quando o input está em foco */
+    outline: none;           /* Remove a borda padrão do foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adiciona uma sombra ao foco */
+}
+

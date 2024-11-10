@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratativas e Bloco de notas</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Bloco de Notas Pedro</h1>
+    </header>
+    
+    <main class="tab-container">
+        <section>
+            <h2>Bloco de Notas</h2>
+            <textarea id="notes" rows="50" placeholder="Escreva suas notas aqui..."></textarea>
+            <div>
+                <button id="copyButton">Copiar</button>
+                <button id="clearButton">Limpar</button>
+            </div>
+        </section>
+
+        <article class="tabela_qbox">
+            <div class="square"></div>
+            <h2>Tabela Qbox</h2>
+                <p id="tab1">
+                    Placa: <input type="text" id="Placa" placeholder="Digite a placa"><br>
+                    Carreta: <input type="text" id="Carreta" placeholder="Digite a carreta"><br>
+                    Motorista: <input type="text" id="Motorista" placeholder="Digite o motorista"><br>
+                    Operação: <input type="text" id="Operação" placeholder="Digite a operação"><br>
+                    Carga: <input type="text" id="Carga" placeholder="Digite a carga"><br>
+                    Localização: <input type="text" id="Localização" placeholder="Digite a localização"><br>
+                    Situação: <input type="text" id="Situação" placeholder="Digite a situação"><br>
+                    Ocorrência: <textarea id="Ocorrência" placeholder="Digite a ocorrência" rows="5" cols="1"></textarea><br>
+                </p>
+            <button id="copiarTabela">Copiar</button>
+            <button id="clearButton1">Limpar</button>
+        </article>
+        
+
+        <article class="emailalt">
+            <div class="square"></div>
+            <h2>E-mails Padrões</h2>
+            
+            <div class="question">
+                <p>Contato com o condutor?</p>
+                <label>
+                    <input type="radio" name="contato_condutor" value="sim"> Sim
+                </label>
+                <label>
+                    <input type="radio" name="contato_condutor" value="nao"> Não
+                </label>
+                <label>
+                    <input type="radio" name="contato_condutor" value="inexistente_mot">Inexistente
+                </label>
+                <input type="text" id="nome_motorista" placeholder="Nome do motorista">
+                <input type="text" id="numero_motorista" placeholder="Número do telefone">
+            </div>
+            
+            
+            <div class="question">
+                <p>Contato com o Responsável?</p>
+                <label>
+                    <input type="radio" name="contato_responsavel" value="sim"> Sim
+                </label>
+                <label>
+                    <input type="radio" name="contato_responsavel" value="nao"> Não
+                </label>
+                <label>
+                    <input type="radio" name="contato_responsavel" value="inexistente_resp">Inexistente
+                </label>
+                <input type="text" id="nome_responsavel" placeholder="Nome do responsável">
+                <input type="text" id="numero_responsavel" placeholder="Número do responsável">
+            </div>
+
+            <div class="question">
+                <p>Contato com o Responsável Via Grupo</p>
+                <label>
+                    <input type="radio" name="contato_responsavel_grupo" value="Qbox"> Qbox
+                </label>
+                <label>
+                    <input type="radio" name="contato_responsavel_grupo" value="Otimiza"> Otimiza
+                </label>
+                <label>
+                    <input type="radio" name="contato_responsavel_grupo" value="Adege"> Adege
+                </label>
+                <label>
+                    <input type="radio" name="contato_responsavel_grupo" value="GVM"> GVM
+                </label>
+                <label>
+                    <input type="radio" name="contato_responsavel_grupo" value="Milklat"> Milklat
+                </label>
+                <label>
+                    <input type="radio" name="contato_responsavel_grupo" value="Rapido_parana"> Rápido Paraná
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>Contato com a policia/continuidade?</p>
+                <label>
+                    <input type="radio" name="acionamento_policial" value="sim"> Sim
+                </label>
+                <label>
+                    <input type="radio" name="acionamento_policial" value="nao"> Não
+                </label>
+                <label>
+                    <input type="radio" name="continuidade_policial" value="Continuidade"> Continuidade
+                </label>
+                <input type="text" id="nome_policial" placeholder="Local da PRF/PM">
+                <input type="text" id="numero_policial" placeholder="Número da PRF/PM">
+            </div>
+            <div>
+                <button id="gerarTexto">Gerar/Copiar</button>
+                <button id="limparEscolhas">Limpar Escolhas</button>
+                <textarea id="textoGerado" rows="4" cols="50" readonly style="display: none;"></textarea>
+            </div>
+        </div>
+        </article>
+        
+        <div id="alerta">Texto copiado!</div>
+        <article class="rest">
+            <div class="square"></div>
+            <h2>E-mail de restabelecimento Perda</h2>
+            <p id="sinal1">o veículo em questão voltou a posicionar em nosso sistema, segue a rota pré-estabelecida em sua solicitação de monitoramento e não gerou demais violações. Salientamos que a ocorrência policial foi devidamente finalizada.</p>
+            <button onclick="copiarTexto('sinal1')">Copiar</button>
+            <h2>E-mail de restabelecimento Alerta</h2>
+            <p id="alert1">o condutor do veículo em questão voltou a seguir viagem, encontra-se com sinal atualizado e segue a rota pré-estabelecida em sua solicitação de monitoramento, não gerou demais violações. Salientamos que a ocorrência policial foi devidamente finalizada.</p>
+            <button onclick="copiarTexto('alert1')">Copiar</button>
+        </article>
+        
+        <article class="email_restabelecimento">
+            <div class="square"></div>
+            <h2>Perda em Cliente</h2>
+            <p id="perclt1">Notificamos que o veículo em questão está com perda de sinal em pátio de cliente/transportadora. Deste modo não seguiremos com o procedimento de contingência. Veículo não gerou alerta antes da perda. Todos os comandos cabíveis foram enviados ao veículo.</p>
+            <button onclick="copiarTexto('perclt1')">Copiar</button>
+            <h2>Continuidade de Retirada de Espelhamento</h2>
+            <p id="retirada">Notificamos que o veículo em questão permanece sem o espelhamento para nossa central. Desta forma notificamos os responsáveis.</p>
+            <button onclick="copiarTexto('retirada')">Copiar</button>
+        </article>
+
+        <section>
+            <h2>Pesquisa de Postos</h2>
+            <input type="text" id="searchInput" placeholder="Digite a cidade ou nome do posto...">
+            <div class="table-section">
+                <table id="resultTable">
+                    <thead>
+                        <tr>
+                            <th>Cidade</th>
+                            <th>Posto</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">Nenhum resultado encontrado.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <article class="pronta_resposta">
+            <div class="square"></div>
+            <h2>PR Consultar prestador!</h2>
+            <p>Bom dia!<br>
+            Consultar prestador!<br>
+            Local: <input type="text" id="local" placeholder="Digite o local"><br>
+            </p>
+            <button id="copiarDados">Copiar Consultar Prestador</button>
+            <h2>Dados Motorista / Veículo</h2>
+            <p>
+                Cavalo: <input type="text" id="cavalo" placeholder="Digite o cavalo"><br>
+                Carreta: <input type="text" id="carreta_pr" placeholder="Digite a carreta"><br>
+                Modelo: <input type="text" id="modelo" placeholder="Digite o modelo"><br>
+                Cor: <input type="text" id="cor" placeholder="Digite a cor"><br>
+                Motorista: <input type="text" id="motorista_pr" placeholder="Digite o motorista"><br>
+                CPF: <input type="text" id="cpf" placeholder="Digite o CPF"><br>
+            </p>
+            <button id="copiarDadosVeiculo">Copiar Dados Veículo</button>
+            <button id="clearButton_2">Limpar</button>
+            <div id="alerta" style="display:none;">Texto copiado!</div>
+        </article>
+        
+        <article class="trat_qbox">
+            <div class="square"></div>
+            <h2>Parada não Informada</h2>
+            <p>•Se estiver em posto homologado, considerar pernoite!</p>
+            <p>•Se não estiver em posto homologado, seguir com os procedimentos de contingência.</p>
+            <h2>Tabela Qbox</h2>
+            <p>•Vai ser enviada todos os dias uma tabela com determinados veículos. Tem que ser verificado se o mesmo está em viagem/aguardando início e retornar no grupo. Foi pedido para realizar este procedimento duas vezes ao turno.</p>
+            <h2>Viagem não liberada</h2>
+            <p>•Verificar se foi integrada no Trafegus.
+            <br>•Caso tenha sido integrada, efetivar ela no Sistec e Trafegus e colocar a anotação ○!AG>>.</p>
+        </article>
+        
+        <article class="trat_qbox_1">
+            <div class="square"></div>
+            <h2>Pernoite em posto</h2>
+            <p>•Verificar na lista se o local é homologado ou não.</p>
+            <p>•Se estiver em posto homologado, considerar pernoite!</p>
+            <p>•Se não estiver em posto homologado, seguir com os procedimentos de contingência.</p>
+            <h2>Alertas no geral (Perda, desengate, painel...)</h2>
+            <p>•Caso tenha ocorrido fora do Brasil, apenas notificar no grupo e realizar o registro.</p>
+            <p>•Caso tenha ocorrido no Brasil, notificar no grupo e realizar o procedimento de contingência.</p>,
+            <h2>Código de pontos Qbox</h2>
+            <ul>
+                <li>5049982 - PASO DE LIBRES ARGENTINA</li>
+                <li>304189 - PLANTA CAMPANA BUENOS AIRES/AR</li>
+                <li>342365 - URUGUAIANA</li>
+            </ul>
+            <h2>Pernoite em residência, autorizado nas cidades:</h2>
+            <p>•Autorizado desengate desde que tenha sido gerado em posto. Caso tenha gerado em residência, seguir os procedimentos.</p>
+            <ul>
+                <li>São Borja</li>
+                <li>São Luiz Gonzaga</li>
+                <li>Ijui</li>
+                <li>Uruguaiana</li>
+                <li>Bossoroca</li>
+            </ul>
+        </article> 
+    </main>
+
+    <script src="/JV/script.js"></script>
+</body>
+</html>
