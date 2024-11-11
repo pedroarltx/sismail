@@ -223,7 +223,7 @@ if (transportadoras) {
     const continuidadePolicial = document.querySelector('input[name="continuidade_policial"]:checked');
     if (continuidadePolicial) {
         if (continuidadePolicial.value === 'Continuidade') {
-            texto += "Sendo assim, manteremos o acionamento policial até normalizar a situação. Segue nossa proposta de pronto atendimento:";
+            texto += "Sendo assim, manteremos o acionamento policial ativo até normalizar a situação. Segue nossa proposta de pronto atendimento:";
         }
     }
 
@@ -408,8 +408,6 @@ document.addEventListener('DOMContentLoaded', () => {
     copiarDadosVeiculoButton.addEventListener('click', copiarDadosVeiculo);
     clearButton.addEventListener('click', limparCampos);
 });
-
-
 
 
 main();
