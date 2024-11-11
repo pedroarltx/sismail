@@ -181,22 +181,22 @@ document.getElementById('gerarTexto').addEventListener('click', () => {
 const transportadoras = document.querySelector('input[name="contato_responsavel_grupo"]:checked');
 if (transportadoras) {
     if (transportadoras.value === "Qbox") {
-        texto += "Sendo assim notificamos os responsáveis através do grupo de WhatsApp Qbox - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
+        texto += "Deste modo notificamos os responsáveis através do grupo de WhatsApp Qbox - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
     }
     else if (transportadoras.value === "Otimiza"){
-        texto += "Sendo assim notificamos os responsáveis através do grupo de WhatsApp Otimiza - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
+        texto += "Deste modo notificamos os responsáveis através do grupo de WhatsApp Otimiza - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
     }
     else if (transportadoras.value === "Adege"){
-        texto += "Sendo assim notificamos os responsáveis através do grupo de WhatsApp Adege - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
+        texto += "Deste modo notificamos os responsáveis através do grupo de WhatsApp Adege - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
     }
     else if (transportadoras.value === "GVM"){
-        texto += "Sendo assim notificamos os responsáveis através do grupo de WhatsApp GVM - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
+        texto += "Deste modo notificamos os responsáveis através do grupo de WhatsApp GVM - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
     }
     else if (transportadoras.value === "Milklat"){
-        texto += "Sendo assim notificamos os responsáveis através do grupo de WhatsApp Milklat - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
+        texto += "Deste modo notificamos os responsáveis através do grupo de WhatsApp Milklat - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
     }
     else if (transportadoras.value === "Rapido_parana"){
-        texto += "Sendo assim notificamos os responsáveis através do grupo de WhatsApp Rápido Paraná - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
+        texto += "Deste modo notificamos os responsáveis através do grupo de WhatsApp Rápido Paraná - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
     }
 }
     // Acionamento Policial
