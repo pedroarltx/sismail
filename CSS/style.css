@@ -1,18 +1,31 @@
+/* Variáveis do CSS */
 :root {
     --primary-color: #007BFF;
     --text-color: #333;
     --background-color: #f4f4f4;
     --input-padding: 5px;
-    --input-margin: 7px;
+    --input-margin: 9px;
     --border-radius: 15px;
     --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    --btn-padding: 5px 20px;
+    --btn-padding: 5px 25px;
     --btn-font-size: 16px;
     --btn-radius: 15px;
     --btn-bg-color: var(--primary-color);
     --btn-hover-color: #D9910D;
 }
 
+/* Resetando margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2,
+p{
+    margin: 10px 10px;
+}
+/* Estilos gerais para o body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -20,19 +33,100 @@ body {
     background-color: var(--background-color);
 }
 
+
+/* Estilo para o header */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+/* Estilo para o container da logo */
+.logo-container {
+    flex: 0 0 auto;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    height: 50px;
+}
+
+/* Estilo para a navbar */
+.navbar {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Lista de navegação */
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+/* Itens da lista */
+.navbar li {
+    margin-left: 20px;
+}
+
+/* Links */
+.navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Efeito ao passar o mouse nos links */
+.navbar a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Alterando a disposição para mobile */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+}
+
+
 #textoGerado,
 .content, 
 #alerta {
     display: none;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
 
 textarea, #Ocorrência {
-    width: 92%;
+    width: 100%;
     padding: 10px;
     resize: none;
     border-radius: var(--border-radius);
@@ -81,7 +175,7 @@ label {
     border-radius: var(--border-radius);
     margin: 10px;
     padding: 10px;
-    width: calc(30% - 20px);
+    width: calc(30% - 15px);
     height: auto;
     box-shadow: var(--box-shadow);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -116,7 +210,7 @@ button:active {
 .tab-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .tab-container h2 {
@@ -156,7 +250,7 @@ button:active {
 #resultTable th, #resultTable td {
     padding: 12px;
     text-align: center;
-    font-size: 10px;
+    font-size: 9px;
     border-radius: var(--border-radius);
 }
 
