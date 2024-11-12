@@ -192,8 +192,8 @@ if (transportadoras) {
     else if (transportadoras.value === "GVM"){
         texto += "Deste modo notificamos os responsáveis através do grupo de WhatsApp GVM - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
     }
-    else if (transportadoras.value === "Milklat"){
-        texto += "Deste modo notificamos os responsáveis através do grupo de WhatsApp Milklat - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
+    else if (transportadoras.value === "jvtrans"){
+        texto += "Deste modo notificamos os responsáveis através do grupo de WhatsApp JV Transportes - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
     }
     else if (transportadoras.value === "Rapido_parana"){
         texto += "Deste modo notificamos os responsáveis através do grupo de WhatsApp Rápido Paraná - Tecnorisk, onde os deixamos ciente da situação e informados que seguiremos com o procedimento de contingência. ";
