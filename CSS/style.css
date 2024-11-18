@@ -33,105 +33,22 @@ body {
     background-color: var(--background-color);
 }
 
-
-/* Estilo para o header */
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background-color: white;
-    box-shadow: var(--box-shadow);
-}
-
-/* Estilo para o container da logo */
-.logo-container {
-    flex: 0 0 auto;
-}
-
-/* Logo */
-.logo {
-    width: 150px;
-    height: 50px;
-}
-
-/* Estilo para a navbar */
-.navbar {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* Lista de navegação */
-.navbar ul {
-    list-style: none;
-    display: flex;
-}
-
-/* Itens da lista */
-.navbar li {
-    margin-left: 20px;
-}
-
-/* Links */
-.navbar a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px;
-    transition: color 0.3s, transform 0.3s;
-}
-
-/* Efeito ao passar o mouse nos links */
-.navbar a:hover {
-    color: var(--primary-color);
-    transform: translateY(-3px);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    /* Alterando a disposição para mobile */
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar {
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    .navbar ul {
-        justify-content: center;
-        width: 100%;
-    }
-
-    .navbar li {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .logo {
-        width: 120px;
-    }
-}
-
-
 #textoGerado,
 .content, 
 #alerta {
     display: none;
 }
 
-
 textarea, #Ocorrência {
     width: 100%;
     padding: 10px;
     resize: none;
     border-radius: var(--border-radius);
+    margin-top: 5px;
 }
-
+#searchInput{
+    width: 560px;
+}
 textarea {
     height: 350px;
 }
@@ -173,15 +90,57 @@ label {
     background-color: white;
     border: 2px solid #ccc;
     border-radius: var(--border-radius);
-    margin: 10px;
+    margin: 30px 5px 30px 100px;
     padding: 10px;
-    width: calc(30% - 15px);
+    width: 600px;
     height: auto;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+.tab-container1 > article, section{
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: var(--border-radius);
+    margin: 15px 5px 5px 5px;
+    padding: 10px;
+    width: 600px;
     box-shadow: var(--box-shadow);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.tab-container .tab-container-notes{
+    margin: 55px 5px 5px 5px;
+}
+
+.tab-container .trat_qbox{
+    margin: 10px 2px 10px 55px;
+    width: 350px;
+}
+.tab-container .rest{
+    width: 400px;
+}
+
+.tab-container .email_restabelecimento{
+    width: 400px;
+}
+
+
+@media (max-width: 768px) {
+    .tab-container > article, section {
+        width: 350px;
+        margin: 10px;
+    }.tab-container1 > article, section {
+        width: 350px;
+        margin: 10px;
+    }
+}
+
 .qboxtrat:hover, .tab-container > article:hover, section:hover {
+    transform: scale(1.02);
+}
+
+.qboxtrat:hover, .tab-container1 > article:hover, section:hover {
     transform: scale(1.02);
 }
 
@@ -207,25 +166,30 @@ button:active {
     color: var(--text-color);
 }
 
-.tab-container {
+.tab-container,
+.tab-container1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.tab-container h2 {
-    font-size: 18px;
+.tab-container h2,
+.tab-container1 h2 {
+    font-size: 20px;
+    text-align: center;
     color: var(--primary-color);
     margin-top: 5px;
 }
 
-.tab-container p, .tab-container ul li {
+.tab-container p, .tab-container ul li,
+.tab-container1 p, .tab-container1 ul li {
     font-size: 14px;
     line-height: 1.5;
     color: #555;
 }
 
-.tab-container ul {
+.tab-container ul,
+.tab-container1 ul {
     margin: 10px 0;
     padding-left: 20px;
 }
@@ -233,6 +197,7 @@ button:active {
 .container {
     overflow-x: auto;
     max-width: 100%;
+    overflow: hidden;
 }
 
 .table-section {
@@ -267,19 +232,13 @@ button:active {
     background-color: #ddd;
 }
 
-@media (max-width: 768px) {
-    .tab-container > article, section {
-        width: calc(100% - 20px);
-    }
-}
-
 input[type="text"], input[type="number"] {
     padding: var(--input-padding);
     margin: var(--input-margin);
     border: 1px solid #ccc;
     border-radius: var(--border-radius);
     font-size: 12px;
-    width: 230px;
+    width: 350px;
     text-align: center;
     transition: border-color 0.3s;
 }
@@ -288,6 +247,11 @@ input[type="text"]:focus, input[type="number"]:focus {
     border-color: var(--primary-color);
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 200px;
+    }
 }
 
 #nome_motorista,

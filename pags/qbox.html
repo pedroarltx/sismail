@@ -9,15 +9,55 @@
 </head>
 <body>
   <header>
-    <div class="logo-container">
-        <img src="/imagens/tec.png" alt="SisMail" class="logo">
-    </div>
-    <nav class="navbar">
-        <ul>
-            <li><a href="/index.html">Início</a></li>
-        </ul>
-    </nav>
-  </header>
+    <nav class="menu-lateral">
+      <div class="btn-expandir">
+          <i class="bi bi-list" id="btn-exp"></i>
+      </div><!--btn-expandir-->
+      <ul>
+          <li class="item-menu">
+            <a href="/pags/index.html">
+                <span class="icon"><i class="bi bi-house"></i></span>
+                <span class="txt-link">Home</span>
+            </a>
+          </li>
+          <li class="item-menu">
+              <a href="/pags/notes.html">
+                  <span class="icon"><i class="bi bi-stickies"></i></span>
+                  <span class="txt-link">Notes</span>
+              </a>
+          </li>
+          <li class="item-menu">
+              <a href="/pags/emails.html">
+                  <span class="icon"><i class="bi bi-envelope-plus"></i></span>
+                  <span class="txt-link">Email</span>
+              </a>
+          </li>
+          <li class="item-menu">
+              <a href="/pags/tabs.html">
+                  <span class="icon"><i class="bi bi-list-task"></i></span>
+                  <span class="txt-link">Tabela</span>
+              </a>
+          </li>
+          <li class="item-menu">
+              <a href="/pags/postos.html">
+                  <span class="icon"><i class="bi bi-geo-alt"></i></span>
+                  <span class="txt-link">Postos</span>
+              </a>
+          </li>
+          <li class="item-menu">
+              <a href="/pags/pr.html">
+                  <span class="icon"><i class="bi bi-car-front"></i></span>
+                  <span class="txt-link">PR</span>
+              </a>
+          </li>
+      </ul>
+  </nav><!--menu-lateral-->
+    <lord-icon
+    src="https://cdn.lordicon.com/lupuorrc.json"
+    trigger="loop"
+    style="width:250px;height:250px">
+</lord-icon>
+</header>
   <main class="tab-container">
     <article class="trat_qbox">
       <div class="square"></div>

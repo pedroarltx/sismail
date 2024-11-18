@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="/imagens/envelope-at-fill.svg">
+    <title>SisMail</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/menustyle.css">
+</head>
+<body>
+    <header>
+        <nav class="menu-lateral">
+            <div class="btn-expandir">
+                <i class="bi bi-list" id="btn-exp"></i>
+            </div><!--btn-expandir-->
+            <ul>
+                <li class="item-menu">
+                    <a href="/pags/index.html">
+                        <span class="icon"><i class="bi bi-house"></i></span>
+                        <span class="txt-link">Home</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="/pags/notes.html">
+                        <span class="icon"><i class="bi bi-stickies"></i></span>
+                        <span class="txt-link">Notes</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="/pags/emails.html">
+                        <span class="icon"><i class="bi bi-envelope-plus"></i></span>
+                        <span class="txt-link">Email</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="/pags/tabs.html">
+                        <span class="icon"><i class="bi bi-list-task"></i></span>
+                        <span class="txt-link">Tabela</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="/pags/postos.html">
+                        <span class="icon"><i class="bi bi-geo-alt"></i></span>
+                        <span class="txt-link">Postos</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="/pags/pr.html">
+                        <span class="icon"><i class="bi bi-car-front"></i></span>
+                        <span class="txt-link">PR</span>
+                    </a>
+                </li>
+            </ul>
+        </nav><!--menu-lateral-->
+        <lord-icon
+        src="https://cdn.lordicon.com/lupuorrc.json"
+        trigger="loop"
+        style="width:250px;height:250px">
+    </lord-icon>
+    </header>
+    <div class="container">
+        <div class="tab-container">
+            <article class="trat_qbox">
+                <div class="square"></div>
+                <h2>Parada não Informada</h2>
+                <p>•Se estiver em posto homologado, considerar pernoite!</p>
+                <p>•Se não estiver em posto homologado, seguir com os procedimentos de contingência.</p>
+              </article>
+              <article class="trat_qbox">
+                <div class="square"></div>
+                <h2>Tabela Qbox</h2>
+                <p>•Vai ser enviada todos os dias uma tabela com determinados veículos. Tem que ser verificado se o mesmo está em viagem/aguardando início e retornar no grupo. Foi pedido para realizar este procedimento duas vezes ao turno.</p>
+              </article>
+              <article class="trat_qbox">
+                <div class="square"></div>
+                <h2>Viagem não liberada</h2>
+                <p>•Verificar se foi integrada no Trafegus.</p>
+                <p>•Caso tenha sido integrada, efetivar ela no Sistec e Trafegus e colocar a anotação ○!AG>>.</p>  
+              </article>
+              <article class="trat_qbox">
+                <div class="square"></div>
+                <h2>Alertas no geral (Perda, desengate, painel...)</h2>
+                <p>•Caso tenha ocorrido fora do Brasil, apenas notificar no grupo e realizar o registro.</p>
+                <p>•Caso tenha ocorrido no Brasil, notificar no grupo e realizar o procedimento de contingência.</p>
+              </article>
+              <article class="trat_qbox">
+                <div class="square"></div>
+                <h2>Código de pontos Qbox</h2>
+                <ul>
+                    <li>5049982 - PASO DE LIBRES ARGENTINA</li>
+                    <li>304189 - PLANTA CAMPANA BUENOS AIRES/AR</li>
+                    <li>342365 - URUGUAIANA</li>
+                </ul>
+              </article>
+              <article class="trat_qbox">
+                <div class="square"></div>
+                <h2>Pernoite em residência, autorizado nas cidades:</h2>
+                <p>•Autorizado desengate desde que tenha sido gerado em posto. Caso tenha gerado em residência, seguir os procedimentos.</p>
+                <ul>
+                    <li>São Borja</li>
+                    <li>São Luiz Gonzaga</li>
+                    <li>Ijui</li>
+                    <li>Uruguaiana</li>
+                    <li>Bossoroca</li>
+                </ul> 
+              </article>
+              <article class="trat_qbox">
+                <div class="square"></div>
+                <h2>Pernoite em posto</h2>
+                <p>•Verificar na lista se o local é homologado ou não.</p>
+                <p>•Se estiver em posto homologado, considerar pernoite!</p>
+                <p>•Se não estiver em posto homologado, seguir com os procedimentos de contingência.</p>
+            </article> 
+        </div>
+    </div>
+</body>
+<script src="/js/script.js"></script>
+<script src="/js/menu.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>   
+</html>
